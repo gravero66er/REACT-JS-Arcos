@@ -1,0 +1,126 @@
+.header {
+  margin: 0 auto;
+  max-width: 80%;
+  height: 100px;
+  @include flex-between;
+  align-items: center;
+  z-index: 0;
+}
+
+.header__icons {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+}
+
+.icon__item svg {
+  width: 20px;
+  height: 50px;
+  fill: #1463aa;
+  transition-duration: 0.3s;
+}
+
+.icon__item svg:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+.header__burger {
+  display: none;
+}
+
+.header__burger div {
+  margin: 0 auto;
+  width: 50px;
+  height: 5px;
+  background-color: #1463aa;
+  border-radius: 20px;
+  transform-origin: -0.1px;
+  transition: all 0.3s linear;
+}
+
+.header__menu {
+  @include flex-between;
+  width: 600px;
+  transition-duration: 0.3s;
+}
+
+.menu__item {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #1463aa !important;
+  text-decoration: none;
+}
+
+.menu__item:hover {
+  cursor: pointer;
+}
+
+.menu__item:after {
+  background-color: #1463aa;
+  display: block;
+  content: "";
+  margin-top: 4px;
+  height: 1px;
+  width: 0%;
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz--transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+.menu__item:hover:after,
+.menu__item:focus:after {
+  width: 100%;
+}
+
+.social__links {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .header__burger {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    right: 20%;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+    transition: all 0.3s linear;
+  }
+
+  .header__menu {
+    flex-flow: column nowrap;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    min-width: 320px;
+    height: 350px;
+    left: 0;
+    padding: 40px 0;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 10px 47px -15px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 47px -15px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 47px -15px rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    z-index: 1;
+  }
+
+  .menu__item {
+    margin: 10px 0;
+    font-size: 15px;
+  }
+
+  .social__links {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .header__icons {
+    display: none;
+  }
+}

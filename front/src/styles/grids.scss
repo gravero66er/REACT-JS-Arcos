@@ -1,0 +1,193 @@
+.grids {
+  margin: 0 auto;
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+}
+
+.header__production,
+.header__shop,
+.header__development,
+.header__development-supply {
+  position: relative;
+  padding: 40px;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 10px;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  background: #1463aa;
+  z-index: 0;
+  -webkit-transform: skew(10deg);
+  -moz-transform: skew(10deg);
+  -o-transform: skew(10deg);
+}
+
+.header__production:hover,
+.header__shop:hover,
+.header__development:hover,
+.header__development-supply:hover {
+  transform: scale(1.2) translateY(-20px);
+  z-index: 1;
+}
+
+.header__production::before,
+.header__shop::before,
+.header__development::before,
+.header__development-supply::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: -40px;
+  width: 450px;
+  height: 370px;
+  opacity: 0.4;
+  transition-duration: 0.3s;
+  -webkit-transform: skew(-10deg);
+  -moz-transform: skew(-10deg);
+  -o-transform: skew(-10deg);
+}
+
+.header__production::before {
+  background: url("../img/prod.png") center/cover no-repeat;
+}
+.header__development-supply::before {
+  background: url("../img/sup.png") center/cover no-repeat;
+}
+.header__shop::before {
+  background: url("../img/shop.png") center/cover no-repeat;
+}
+.header__development::before {
+  background: url("../img/dev.png") center/cover no-repeat;
+}
+
+.header__production:hover::before,
+.header__shop:hover::before,
+.header__development:hover::before,
+.header__development-supply:hover::before {
+  -webkit-transform: skew(0deg);
+  -moz-transform: skew(0deg);
+  -o-transform: skew(0deg);
+  opacity: 0.7;
+}
+
+.header__production h1,
+.header__shop h1,
+.header__development h1,
+.header__development-supply h1 {
+  position: absolute;
+  z-index: 2;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 1.6vw;
+  text-transform: uppercase;
+  color: #fff;
+  top: 200px;
+  left: 30px;
+  max-width: 4vw;
+}
+
+.header__production p,
+.header__shop p,
+.header__development p,
+.header__development-supply p {
+  position: absolute;
+  z-index: 2;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: left;
+  color: #fff;
+  top: 240px;
+  left: 30px;
+  max-width: 15vw;
+}
+
+@media (max-width: 1200px) {
+  .header__production h1,
+  .header__shop h1,
+  .header__development h1,
+  .header__development-supply h1 {
+    top: 160px;
+    left: 10px;
+    max-width: 4vw;
+  }
+
+  .header__production p,
+  .header__shop p,
+  .header__development p,
+  .header__development-supply p {
+    top: 200px;
+    left: 10px;
+    max-width: 15vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .grids {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 5px;
+  }
+
+  .header__production,
+  .header__shop,
+  .header__development,
+  .header__development-supply {
+    -webkit-transform: skew(0deg);
+    -moz-transform: skew(0deg);
+    -o-transform: skew(0deg);
+  }
+
+  .header__production::before,
+  .header__shop::before,
+  .header__development::before,
+  .header__development-supply::before {
+    -webkit-transform: skew(0deg);
+    -moz-transform: skew(0deg);
+    -o-transform: skew(0deg);
+  }
+
+  .header__production h1,
+  .header__shop h1,
+  .header__development h1,
+  .header__development-supply h1 {
+    top: 40px;
+    left: 20px;
+    max-width: 4vw;
+    font-size: 15px;
+  }
+
+  .header__production p,
+  .header__shop p,
+  .header__development p,
+  .header__development-supply p {
+    top: 70px;
+    left: 20px;
+    max-width: 170px;
+  }
+
+  .header__production:hover,
+  .header__shop:hover,
+  .header__development:hover,
+  .header__development-supply:hover {
+    transform: none;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .grids {
+    grid-template-columns: 1fr;
+  }
+  .header__production::before,
+  .header__shop::before,
+  .header__development::before,
+  .header__development-supply::before {
+    left: -50px;
+  }
+}
