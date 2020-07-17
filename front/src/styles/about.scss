@@ -105,8 +105,8 @@
   transition-duration: 0.3s;
 }
 
-.form__item textarea:focus {
-  transform: scale(1.1);
+.form__item textarea:hover {
+  transform: scale(1.05);
 }
 
 .form__message {

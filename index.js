@@ -13,7 +13,7 @@ app.get('/', () => {
     resizeBy.send('welcome to my form!')
 });
 
-app.post('api/forma', (req, res) => {
+app.post('/api/forma', (req, res) => {
     let data = req.body
     let smtpTransport = nodeMailer.createTransport({
         service: 'Yandex',
@@ -47,14 +47,14 @@ app.post('api/forma', (req, res) => {
             res.send(error)
         } else {
             res.send('Success!')
-        }
+        }   
     })
 
     smtpTransport.close();
 })
 
 
-const PORT = process.env.PORT||3001;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`server starting at port ${PORT}`)
 })

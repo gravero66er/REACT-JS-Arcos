@@ -49,7 +49,7 @@ class MailForm extends Component {
     };
 
     axios
-      .post("api/forma", data)
+      .post("/api/forma", data)
       .then((res) => {
         this.setState(
           {
