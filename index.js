@@ -13,21 +13,21 @@ app.get('/', () => {
     resizeBy.send('welcome to my form!')
 });
 
-app.post('/api/forma', (req, res) => {
+app.post('/api/forma', async (req, res) => {
     let data = req.body
     let smtpTransport = nodeMailer.createTransport({
-        host: 'smtp.mail.ru',
+        host: 'smtp.yandex.ru',
         port: 465,
         secure: true,
         auth: {
-            user: 'arcos_mail_service@mail.ru',
-            pass: 'Nodemailer'
+            user: 'sofin@td-arcos.ru',
+            pass: 'Sjfudry6'
         }
     });
 
     let mailOptions = {
-        from: data.email,
-        to: 'sofin@td-arcos.ru',
+        from: 'sofin@td-arcos.ru',
+        to: 'sofin@td-arcos.ru, s03@td-arcos.ru',
         subject: `Message from ${data.name}`,
         html: `
         <h3>Informations</h3>
@@ -42,6 +42,17 @@ app.post('/api/forma', (req, res) => {
         `
     };
 
+    // try {
+    //     const info = await smtpTransport.sendMail(mailOptions);
+    //     console.log(info);
+    //     res.status(200);
+    // } catch (error) {
+    //     console.error(error);
+    //     res.status(500).send(error);
+    // } finally {
+    //     smtpTransport.close();
+    // }
+
     smtpTransport.sendMail(mailOptions, (error, resp) => {
         if (error) {
             res.send(error)
@@ -50,7 +61,8 @@ app.post('/api/forma', (req, res) => {
         }
     })
 
-    smtpTransport.close();
+    smtpTransport.close();  
+
 })
 
 

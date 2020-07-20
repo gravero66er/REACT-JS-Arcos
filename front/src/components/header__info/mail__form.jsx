@@ -85,7 +85,7 @@ class MailForm extends Component {
       this.setState({
         sent: false,
       });
-    }, 1000);
+    }, 3000);
   };
 
   render() {
