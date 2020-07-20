@@ -6,6 +6,7 @@ class MailForm extends Component {
     name: "",
     lastname: "",
     email: "",
+    phone: "",
     message: "",
     sent: false,
   };
@@ -29,6 +30,12 @@ class MailForm extends Component {
       email: event.target.value,
     });
   };
+  
+  hadlePhone = (event) => {
+    this.setState({
+      phone: event.target.value,
+    });
+  };
 
   hadleMessage = (event) => {
     this.setState({
@@ -45,6 +52,7 @@ class MailForm extends Component {
       name: this.state.name,
       lastname: this.state.lastname,
       email: this.state.email,
+      phone: this.state.phone,
       message: this.state.message,
     };
 
@@ -69,6 +77,7 @@ class MailForm extends Component {
       name: "",
       lastname: "",
       email: "",
+      phone: "",
       message: "",
     });
 
@@ -76,7 +85,7 @@ class MailForm extends Component {
       this.setState({
         sent: false,
       });
-    }, 3000);
+    }, 1000);
   };
 
   render() {
@@ -127,8 +136,8 @@ class MailForm extends Component {
               name="phone"
               className="form__input"
               placeholder="Ваш телефон"
-              value={this.state.message}
-              onChange={this.hadleMessage}
+              value={this.state.phone}
+              onChange={this.hadlePhone}
             />
           </div>
 

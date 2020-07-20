@@ -16,11 +16,12 @@ app.get('/', () => {
 app.post('/api/forma', (req, res) => {
     let data = req.body
     let smtpTransport = nodeMailer.createTransport({
-        service: 'Yandex',
-        port: 993,
+        host: 'smtp.mail.ru',
+        port: 465,
+        secure: true,
         auth: {
-            user: 'sofin@td-arcos.ru',
-            pass: 'hello123'
+            user: 'arcos_mail_service@mail.ru',
+            pass: 'Nodemailer'
         }
     });
 
@@ -29,25 +30,24 @@ app.post('/api/forma', (req, res) => {
         to: 'sofin@td-arcos.ru',
         subject: `Message from ${data.name}`,
         html: `
-        
         <h3>Informations</h3>
         <ul>
             <li>Name: ${data.name}</li>
             <li>Lastname: ${data.lastname}</li>
             <li>Email: ${data.email}</li>
+            <li>Phone: ${data.phone}</li>
         </ul>
-
         <h3>Message:</h3>
         <p>${data.message}</p>
         `
     };
 
-    smtpTransport.sendMail(mailOptions, (error, r) => {
+    smtpTransport.sendMail(mailOptions, (error, resp) => {
         if (error) {
             res.send(error)
         } else {
             res.send('Success!')
-        }   
+        }
     })
 
     smtpTransport.close();

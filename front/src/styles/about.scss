@@ -28,8 +28,8 @@
 }
 
 .mail__form {
-  padding: 20px 0 20px;
-  margin: -20px 0 0 0;
+  padding: 35px 0;
+  margin: -35px 0 0 0;
   box-sizing: border-box;
   width: 41%;
   max-height: 565px;
@@ -110,22 +110,23 @@
 }
 
 .form__message {
-  margin: 20px auto;
+  margin: 10px auto;
   text-align: center;
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 15px;
   color: #ffffff;
-  display: none;
+  display: block;
+  opacity: 0;
   transition-duration: 0.3s;
 }
 
 .active {
-  display: block;
+  opacity: 1;
 }
 
 .form__button {
-  margin: 35px auto;
+  margin: 0 auto;
   width: 200px;
 }
 .form__button button {
