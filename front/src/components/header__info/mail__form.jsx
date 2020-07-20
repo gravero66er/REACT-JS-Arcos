@@ -54,8 +54,7 @@ class MailForm extends Component {
         this.setState(
           {
             sent: true,
-          },
-          this.resetForm()
+          }, () => { this.resetForm() }
         );
       })
       .catch(() => {
@@ -141,6 +140,8 @@ class MailForm extends Component {
               cols="30"
               rows="5"
               placeholder="Ваше сообщение"
+              value={this.state.message}
+              onChange={this.hadleMessage}
             ></textarea>
           </div>
 
