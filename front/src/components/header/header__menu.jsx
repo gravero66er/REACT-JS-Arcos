@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Menu = styled.div`
   @media (max-width: 1100px) {
-    top: ${({ open }) => (open ? 0 : "-500px")};
+    top: ${({ open }) => (open ? "-20px" : "-500px")};
   }
 `;
 

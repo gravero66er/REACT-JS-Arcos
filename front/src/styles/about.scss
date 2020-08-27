@@ -1,5 +1,25 @@
+.banner {
+  position: relative;
+  margin: 100px auto 0;
+  padding: 0 0 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner__img {
+  margin: 0 auto;
+  background: linear-gradient(90deg, #1463aa 10%, rgba(48, 51, 59, 0.4) 100%),
+    url("../img/banner_next.png") 0 -110px/1900px no-repeat fixed;
+}
+
+// .banner__img:hover {
+//   background: linear-gradient(90deg, #1463aa 5.39%, rgba(48, 51, 59, 0.4) 100%),
+//     url("../img/banner.png") center/2090px no-repeat;
+// }
+
 .info__row {
-  margin: 100px auto 100px;
+  margin: 0 auto;
+  padding: 90px 0 60px;
   max-width: 80%;
   @include flex-between;
   align-items: top;
@@ -10,21 +30,43 @@
 }
 
 .info__title {
+  position: relative;
+  width: 270px;
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   text-transform: uppercase;
+  color: #fff;
+}
+
+.info__title span {
+  position: relative;
   color: #1463aa;
+}
+
+.info__title::before {
+  content: "";
+  position: absolute;
+  border-radius: 4px;
+  top: -4px;
+  left: -7px;
+  width: 37px;
+  height: 35px;
+  background-color: #fff;
+  z-index: 0;
+  -webkit-transform: skew(10deg);
+  -moz-transform: skew(10deg);
+  -o-transform: skew(10deg);
 }
 
 .info__text {
   font-family: "Jost", sans-serif;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 25px;
   text-align: left;
-  color: #495d63;
+  color: #fff;
 }
 
 .mail__form {
@@ -33,7 +75,7 @@
   box-sizing: border-box;
   width: 41%;
   max-height: 565px;
-  background-color: rgba(20, 99, 170, 0.9);
+  background-color: rgba(20, 99, 170, 0.7);
   border-radius: 10px;
   transition-duration: 0.3s;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.66);
@@ -42,7 +84,7 @@
 }
 
 .mail__form:hover {
-  background-color: rgba(20, 99, 170, 1);
+  background-color: rgba(20, 99, 170, 0.9);
   -webkit-box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.66);
   -moz-box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.66);
   box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.66);
@@ -77,7 +119,7 @@
 }
 
 .form__item input {
-  height: 35px;
+  height: 30px;
   font-family: "Jost", sans-serif;
   font-weight: 400;
   font-size: 13px;
@@ -93,7 +135,7 @@
 }
 
 .form__item textarea {
-  height: 95px;
+  height: 100px;
   resize: none;
   font-family: "Jost", sans-serif;
   font-weight: 400;
@@ -118,7 +160,7 @@
   color: #ffffff;
   display: block;
   opacity: 0;
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
 }
 
 .active {
@@ -147,26 +189,52 @@
   color: #fff;
 }
 
-@media (max-width: 1250px) {
-  .info__text {
-    text-align: justify;
+@media (min-width: 1900px) {
+  .banner__img {
+    margin: 0 auto;
+    background: linear-gradient(
+        90deg,
+        #1463aa 5.39%,
+        rgba(48, 51, 59, 0.4) 100%
+      ),
+      url("../img/banner_next.png") 0 -110px/100vw no-repeat fixed;
   }
 }
 
 @media (max-width: 1200px) {
-  .info__text {
-    text-align: justify;
+  .info__title::before {
+    top: -3px;
+    left: -4px;
+    width: 28px;
+    height: 28px;
   }
 
   .form__title {
     font-size: 25px;
   }
+
+  .info__title {
+    font-size: 25px;
+  }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1070px) {
+  .banner__img {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    background: linear-gradient(180deg, #1463aa 5.39%, rgb(255, 255, 255) 100%);
+    transition: 0.3s;
+  }
+
   .info__row {
     flex-direction: column;
     align-items: center;
+    padding: 40px 0 0px;
+  }
+
+  .info__title {
+    margin-bottom: 30px;
   }
 
   .info__box {
@@ -182,7 +250,7 @@
   }
 
   .mail__form {
-    margin: 80px 0 0 0;
+    margin: 30px 0 0 0;
     width: 100%;
   }
 }

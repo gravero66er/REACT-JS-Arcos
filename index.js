@@ -20,46 +20,47 @@ app.post('/api/forma', async (req, res) => {
         port: 465,
         secure: true,
         auth: {
-            user: 'sofin@td-arcos.ru',
-            pass: 'Sjfudry6'
+            user: 'ArcosMailForm@yandex.ru',
+            pass: 'Arcos2115229'
         }
     });
 
     let mailOptions = {
-        from: 'sofin@td-arcos.ru',
+        from: 'ArcosMailForm@yandex.ru',
         to: 'sofin@td-arcos.ru, s03@td-arcos.ru',
-        subject: `Message from ${data.name}`,
+        subject: `${data.name} ${data.lastname} спрашивает ГК "Аркос"`,
         html: `
-        <h3>Informations</h3>
+        <h3>Данные:</h3>
         <ul>
-            <li>Name: ${data.name}</li>
-            <li>Lastname: ${data.lastname}</li>
+            <li>Имя: ${data.name}</li>
+            <li>Фамилия: ${data.lastname}</li>
             <li>Email: ${data.email}</li>
-            <li>Phone: ${data.phone}</li>
+            <li>Телефон: ${data.phone}</li>
         </ul>
-        <h3>Message:</h3>
+        <h3>Сообщение:</h3>
         <p>${data.message}</p>
         `
     };
 
-    // try {
-    //     const info = await smtpTransport.sendMail(mailOptions);
-    //     console.log(info);
-    //     res.status(200);
-    // } catch (error) {
-    //     console.error(error);
-    //     res.status(500).send(error);
-    // } finally {
-    //     smtpTransport.close();
-    // }
+    try {
+        const info = await smtpTransport.sendMail(mailOptions);
+        console.log(info);
+        res.status(200);
+        res.send('Success!');
+    } catch (error) {
+        console.error(error);
+        res.status(500).send(error);
+    } finally {
+        smtpTransport.close();
+    }
 
-    smtpTransport.sendMail(mailOptions, (error, resp) => {
-        if (error) {
-            res.send(error)
-        } else {
-            res.send('Success!')
-        }
-    })
+    // smtpTransport.sendMail(mailOptions, (error, resp) => {
+    //     if (error) {
+    //         res.send(error)
+    //     } else {
+    //         res.send('Success!')
+    //     }
+    // })
 
     smtpTransport.close();  
 

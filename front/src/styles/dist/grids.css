@@ -81,12 +81,15 @@
 .grids__production::before {
   background: url("../img/prod.png") center/cover no-repeat;
 }
+
 .grids__development-supply::before {
   background: url("../img/sup.png") center/cover no-repeat;
 }
+
 .grids__shop::before {
   background: url("../img/shop.png") center/cover no-repeat;
 }
+
 .grids__development::before {
   background: url("../img/dev.png") center/cover no-repeat;
 }
@@ -142,33 +145,31 @@
 
 @media (min-width: 1600px) {
   .grids__production h1,
-  .grids__shop h1,
-  .grids__development h1,
-  .grids__development-supply h1 {
+.grids__shop h1,
+.grids__development h1,
+.grids__development-supply h1 {
     font-size: 30px;
   }
 }
-
 @media (max-width: 1200px) {
   .grids__production h1,
-  .grids__shop h1,
-  .grids__development h1,
-  .grids__development-supply h1 {
+.grids__shop h1,
+.grids__development h1,
+.grids__development-supply h1 {
     top: 160px;
     left: 10px;
     max-width: 4vw;
   }
 
   .grids__production p,
-  .grids__shop p,
-  .grids__development p,
-  .grids__development-supply p {
+.grids__shop p,
+.grids__development p,
+.grids__development-supply p {
     top: 200px;
     left: 10px;
     max-width: 15vw;
   }
 }
-
 @media (max-width: 1070px) {
   .activities__title {
     width: 300px;
@@ -191,7 +192,6 @@
     display: none;
   }
 }
-
 @media (max-width: 900px) {
   .activities__grids {
     grid-template-columns: 1fr 1fr;
@@ -199,27 +199,27 @@
   }
 
   .grids__production,
-  .grids__shop,
-  .grids__development,
-  .grids__development-supply {
+.grids__shop,
+.grids__development,
+.grids__development-supply {
     -webkit-transform: skew(0deg);
     -moz-transform: skew(0deg);
     -o-transform: skew(0deg);
   }
 
   .grids__production::before,
-  .grids__shop::before,
-  .grids__development::before,
-  .grids__development-supply::before {
+.grids__shop::before,
+.grids__development::before,
+.grids__development-supply::before {
     -webkit-transform: skew(0deg);
     -moz-transform: skew(0deg);
     -o-transform: skew(0deg);
   }
 
   .grids__production h1,
-  .grids__shop h1,
-  .grids__development h1,
-  .grids__development-supply h1 {
+.grids__shop h1,
+.grids__development h1,
+.grids__development-supply h1 {
     top: 40px;
     left: 20px;
     max-width: 4vw;
@@ -227,31 +227,31 @@
   }
 
   .grids__production p,
-  .grids__shop p,
-  .grids__development p,
-  .grids__development-supply p {
+.grids__shop p,
+.grids__development p,
+.grids__development-supply p {
     top: 70px;
     left: 20px;
     max-width: 170px;
   }
 
   .grids__production:hover,
-  .grids__shop:hover,
-  .grids__development:hover,
-  .grids__development-supply:hover {
+.grids__shop:hover,
+.grids__development:hover,
+.grids__development-supply:hover {
     transform: none;
     z-index: 1;
   }
 }
-
 @media (max-width: 500px) {
   .activities__grids {
     grid-template-columns: 1fr;
   }
+
   .grids__production::before,
-  .grids__shop::before,
-  .grids__development::before,
-  .grids__development-supply::before {
+.grids__shop::before,
+.grids__development::before,
+.grids__development-supply::before {
     left: -50px;
   }
 }

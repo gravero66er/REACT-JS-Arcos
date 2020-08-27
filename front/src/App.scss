@@ -1,14 +1,21 @@
 .wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   margin: 0 auto;
   padding: 20px 0;
-  max-width: 1800px;
+  max-width: 1900px;
   min-width: 320px;
 }
-@import 'styles/reset.sass';
-@import 'styles/config.scss';
-@import 'styles/fonts.scss';
-@import 'styles/header.scss';
-@import 'styles/header__logo.scss';
-@import 'styles/about.scss';
-@import 'styles/grids.scss';
 
+@import "styles/reset.sass";
+@import "styles/config.scss";
+@import "styles/fonts.scss";
+@import "styles/header.scss";
+@import "styles/header__logo.scss";
+@import "styles/about.scss";
+@import "styles/grids.scss";
+@import "styles/advantages.scss";
+@import "styles/charts.scss";
+// @import 'styles/map.scss';

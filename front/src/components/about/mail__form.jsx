@@ -30,7 +30,7 @@ class MailForm extends Component {
       email: event.target.value,
     });
   };
-  
+
   hadlePhone = (event) => {
     this.setState({
       phone: event.target.value,
@@ -62,7 +62,10 @@ class MailForm extends Component {
         this.setState(
           {
             sent: true,
-          }, () => { this.resetForm() }
+          },
+          () => {
+            this.resetForm();
+          }
         );
       })
       .catch(() => {
@@ -85,7 +88,7 @@ class MailForm extends Component {
       this.setState({
         sent: false,
       });
-    }, 3000);
+    }, 2000);
   };
 
   render() {

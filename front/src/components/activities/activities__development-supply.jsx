@@ -26,12 +26,12 @@ const Box = styled.div`
   }
 `;
 
-export default function HeaderDevelopmentSup() {
+export default function ActivitiesDevelopmentSup() {
   const [show, setShow] = useState(true);
   return (
     <a href="">
       <Box
-        className="header__development-supply"
+        className="grids__development-supply"
         show={show}
         onMouseEnter={() => setShow(!show)}
         onMouseLeave={() => setShow(!show)}

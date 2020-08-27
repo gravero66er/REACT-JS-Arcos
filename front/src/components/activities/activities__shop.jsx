@@ -26,17 +26,17 @@ const Box = styled.div`
   }
 `;
 
-export default function HeaderProduction() {
+export default function ActivitiesShop() {
   const [show, setShow] = useState(true);
   return (
     <a href="">
       <Box
-        className="header__production"
+        className="grids__shop"
         show={show}
         onMouseEnter={() => setShow(!show)}
         onMouseLeave={() => setShow(!show)}
       >
-        <h1>Производство</h1>
+        <h1>Магазин</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui mollitia
           rem quas voluptas nesciunt possimus illum? Consequatur magnam illo
