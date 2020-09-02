@@ -26,7 +26,8 @@ class charts extends Component {
           </div>
         </div>
         <div className="chart">
-          <div className="chart__info chart__info--left">
+          <LineData />
+          <div className="chart__info">
             <div className="chart__info-title">Lorem, ipsum dolor.</div>
             <div className="chart__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
@@ -38,7 +39,6 @@ class charts extends Component {
               quae doloribus dicta! Pariatur blanditiis natus praesentium.
             </div>
           </div>
-          <LineData />
         </div>
         <div className="chart">
           <PieData />

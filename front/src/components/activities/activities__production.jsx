@@ -4,8 +4,8 @@ import styled from "styled-components";
 const Box = styled.div`
   h1 {
     transition: all 0.5s ease-in-out;
-    transform: ${({ show }) => (show ? "translateY(100px)" : "translateY(0)")};
-    opacity: ${({ show }) => (show ? 0 : 1)};
+    transform: ${({ show }) => (show ? "translateY(70px)" : "translateY(0)")};
+    /* opacity: ${({ show }) => (show ? 0 : 1)}; */
   }
 
   p {
@@ -16,12 +16,13 @@ const Box = styled.div`
 
   @media (max-width: 768px) {
     h1 {
-      transform: translateY(100px);
+      transform: translateY(-20px);
       opacity: 1;
     }
     p {
-      transform: translateY(100px);
+      transform: translateY(-15px);
       opacity: 1;
+      max-width: 200px
     }
   }
 `;

@@ -15,18 +15,14 @@
   margin: 0 auto;
 }
 
-.chart__info--left {
-  position: relative;
-}
-
 .chart__text {
-  max-width: 500px;
+  max-width: 700px;
+  line-height: 20px;
 }
 
 .chart__info-title {
-  position: relative;;
-  width: 550px;
-  margin: 20px 0;
+  margin: 0 auto 20px;
+  max-width: 500px;
   font-family: "Montserrat";
   font-weight: 600;
   font-size: 30px;
@@ -62,9 +58,6 @@
   height: 40px;
   background-color: #1463aa;
   z-index: -1;
-  -webkit-transform: skew(10deg);
-  -moz-transform: skew(10deg);
-  -o-transform: skew(10deg);
 }
 
 @media (max-width: 1070px) {

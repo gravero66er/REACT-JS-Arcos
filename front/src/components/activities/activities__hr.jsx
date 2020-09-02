@@ -25,19 +25,20 @@ const Box = styled.div`
       max-width: 200px
     }
   }
+  }
 `;
 
-export default function ActivitiesDevelopmentSup() {
+export default function ActivitiesHr() {
   const [show, setShow] = useState(true);
   return (
     <a href="">
       <Box
-        className="grids__development-supply"
+        className="grids__hr"
         show={show}
         onMouseEnter={() => setShow(!show)}
         onMouseLeave={() => setShow(!show)}
       >
-        <h1>комплектация</h1>
+        <h1>Карьера</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui mollitia
           rem quas voluptas nesciunt possimus illum? Consequatur magnam illo
