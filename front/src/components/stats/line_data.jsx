@@ -21,7 +21,11 @@ class LineData extends Component {
   render() {
     return (
       <div className="chart__box">
-        <Line data={this.state.chartData} options={{}} />
+        <Line data={this.state.chartData} options={{
+          legend: {
+            display: false,
+          }
+        }}  />
       </div>
     );
   }

@@ -32,8 +32,8 @@
   max-width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
 }
 
 .activities__grids a:nth-child(1) {
@@ -218,6 +218,20 @@
   .activities__grids a:nth-child(5) {
     grid-column: 1/7;
   }
+
+  .grids__production::before {
+    background: url("../img/prod.png") -350px no-repeat;
+    width: 1200px;
+  }
+  .grids__development::before {
+    background: url("../img/dev.png") -300px no-repeat;
+    width: 1200px;
+  }
+  .grids__hr::before {
+    background: url("../img/team.png") -600px no-repeat;
+    width: 1520px;
+  }
+
 }
 
 @media (max-width: 1070px) {

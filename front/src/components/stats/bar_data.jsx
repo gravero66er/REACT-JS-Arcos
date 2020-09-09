@@ -27,7 +27,11 @@ class BarData extends Component {
   render() {
     return (
       <div className="chart__box">
-        <Bar data={this.state.chartData} options={{}} />
+        <Bar data={this.state.chartData} options={{
+          legend: {
+            display: false,
+          }
+        }} />
       </div>
     );
   }
