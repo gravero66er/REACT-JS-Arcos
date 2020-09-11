@@ -45,7 +45,7 @@ const Advantages = () => {
           </div>
         </div>
         <div className="advantages__item">
-          <div data-aos="fade-down" className="advantages__pic">
+          <div data-aos="fade-left" className="advantages__pic">
             <svg display="none">
               <symbol id="stats" viewBox="0 0 64 64">
                 <g>
@@ -77,7 +77,7 @@ const Advantages = () => {
           </div>
         </div>
         <div className="advantages__item">
-          <div data-aos="fade-down" className="advantages__pic">
+          <div data-aos="fade-right" className="advantages__pic">
             <svg display="none">
               <symbol id="prices" viewBox="0 0 64 64">
                 <g>
@@ -113,7 +113,7 @@ const Advantages = () => {
           </div>
         </div>
         <div className="advantages__item">
-          <div data-aos="fade-down" className="advantages__pic">
+          <div data-aos="fade-left" className="advantages__pic">
             <svg display="none">
               <symbol id="clear" viewBox="0 0 64 64">
                 <g>
@@ -146,7 +146,7 @@ const Advantages = () => {
           </div>
         </div>
         <div className="advantages__item">
-          <div data-aos="fade-down" className="advantages__pic">
+          <div data-aos="fade-right" className="advantages__pic">
             <svg display="none">
               <symbol id="timer" viewBox="0 0 64 64">
                 <g>
@@ -190,7 +190,7 @@ const Advantages = () => {
           </div>
         </div>
         <div className="advantages__item">
-          <div data-aos="fade-down" className="advantages__pic">
+          <div data-aos="fade-left" className="advantages__pic">
             <svg display="none">
               <symbol id="documents" viewBox="0 0 64 64">
                 <g>
@@ -235,7 +235,7 @@ const Advantages = () => {
           </div>
         </div>
         <div className="advantages__item">
-          <div data-aos="fade-down" className="advantages__pic">
+          <div data-aos="fade-up" className="advantages__pic">
             <svg display="none">
               <symbol id="goal" viewBox="0 0 64 64">
                 <g>

@@ -66,11 +66,12 @@
     @include flex-between;
     flex-direction: column;
     margin: 0 auto 40px;
+    width: 90%;
   }
 
   .chart__box {
     width: 100%;
-    margin: 0 auto 20px;
+    margin: 0 auto;
   }
 
   .chart__title {

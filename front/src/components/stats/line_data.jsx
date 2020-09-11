@@ -9,7 +9,6 @@ class LineData extends Component {
         labels: ["a", "b", "c", "d", "e", "f"],
         datasets: [
           {
-            label: "Population",
             data: [15, 64, 78, 4, 18, 25],
             borderColor: "#FFD951",
             backgroundColor: "#1463aa",
