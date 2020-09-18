@@ -1,6 +1,6 @@
 .activities__title {
   position: relative;
-  margin: 0 auto 70px;
+  margin: 0 auto 50px;
   width: 550px;
   font-family: "Montserrat";
   font-weight: 600;
@@ -106,11 +106,11 @@
 }
 .grids__development-supply::before {
   background: url("../img/sup.png") center/cover no-repeat;
-  width: 500px;
+  width: 520px;
 }
 .grids__shop::before {
   background: url("../img/shop.png") center/cover no-repeat;
-  width: 500px;
+  width: 520px;
 }
 .grids__development::before {
   background: url("../img/dev.png") center/cover no-repeat;
@@ -118,7 +118,7 @@
 }
 .grids__hr::before {
   background: url("../img/team.png") center/cover no-repeat;
-  width: 1520px;
+  width: 1530px;
 }
 
 .grids__production:hover::before,
@@ -238,7 +238,7 @@
   .activities__title {
     width: 300px;
     font-size: 20px;
-    margin: 30px auto 30px;
+    margin: 0 auto 30px;
   }
 
   .activities__title span {
